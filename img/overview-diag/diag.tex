@@ -2,7 +2,7 @@
 \documentclass[tikz]{standalone}
 \usetikzlibrary{arrows.meta}
 \usepackage{fontspec}
-\setmainfont[ItalicFont=Roboto-Italic]{Roboto-Regular}
+\setmainfont[ItalicFont=Roboto-Italic,BoldFont=Roboto-Bold]{Roboto-Regular}
 \setmonofont{DejaVu Sans Mono}
 
 \begin{document}
@@ -28,33 +28,35 @@
             align=center,
         }]
         %\draw (-10,-10) -- (-10,10) -- (10,10) -- (10,-10) -- cycle;
-        \node [box] (html) at (9,-1) {HTML-Tools};
-        \node [box,double distance=1pt] (users) at (9,7) {Users};
+        \begin{scope}[xshift=-2cm]
+            \node [box,very thick] (html) at (1,-3) {\textbf{HTML-Tools}};
+            \draw[dashed,thick] (-1,-4) rectangle (3,-2);
+            \node at (1,-3.8) {\textit{Front end server}};
+        \end{scope}
+
+        \node [box,double distance=1pt] (users) at (9,7) {User};
 
         \begin{scope}[yshift=3cm]
-        \node [box] (apy) at (1,-1) {APy};
+        \node [box,very thick] (apy) at (1,-1) {\textbf{APy}};
         \begin{scope}[yshift=-1cm]
             \node [box] (deform) at (-4,2) {Deformatter};
-            \node [box] (pipeline) at (-4,0) {Apertium pipeline (one of many)};
+            \node [box] (pipeline) at (-4,0) {Apertium pipeline \\ (one of many)};
             \node [box] (reform) at (-4,-2) {Reformatter};
             \draw[dashed,thick] (-6,-3) rectangle (3,3);
             \node at (1,-2.8) {\textit{Back end server}};
         \end{scope}
         \end{scope}
 
-        \draw[dashed,thick] (7,-2) rectangle (11,0);
-        \node at (9,-1.8) {\textit{Front end server}};
-
         \draw[dashed,thick] (7,1) rectangle (11,4);
         \node at (9,1.2) {\textit{Browser}};
         \node[draw,rectangle] at (9,3.4) {kaz \(\rightarrow\) tat};
-        \node[draw,rectangle,text width=1.4cm,minimum size=1.2cm,align=center] at (8,2.2) {Қанша\ мәтін?};
-        \node[draw,rectangle,text width=1.4cm,minimum size=1.2cm,align=center] at (10,2.2) {Ничә\ текст?};
+        \node[draw,rectangle,text width=1.4cm,minimum size=1.2cm,align=center] at (8,2.2) {Ничә\ текст?};
+        \node[draw,rectangle,text width=1.4cm,minimum size=1.2cm,align=center] at (10,2.2) {Қанша\ мәтін?};
 
         \draw[arrowhead,<-] (9.5,4) to node[nonbox,text width=30mm,right=7mm] {Tatar: \\ ``Ничә\ текст?''} (users.-133);
         \draw[arrowhead,<-] (users.-46) to node[nonbox,text width=30mm,left=9mm] {Kazakh to Tatar, \\ ``Қанша\ мәтін?''} (8.5,4);
-        \draw[arrowhead] (9.5,1) to (html.133);
-        \draw[arrowhead] (html.46) to (8.5,1);
+        \draw[arrowhead,rounded corners=4pt] (9.2,1) |- ([xshift=1cm]html.190) -- (html.190);
+        \draw[arrowhead,rounded corners=4pt] (html.170) -| (8.8,0) -- (8.8,1);
 
         \draw[arrowhead,dotted] (users.187+180) to [bend right=35] (apy.70);
         \draw[arrowhead,dotted] (apy.110) to [bend left=35] (users.173+180);
