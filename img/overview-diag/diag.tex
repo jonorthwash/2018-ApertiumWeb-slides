@@ -1,8 +1,8 @@
 \RequirePackage{luatex85}
-\documentclass[tikz,convert={outfile=\jobname.svg}]{standalone}
+\documentclass[tikz]{standalone}
 \usetikzlibrary{arrows.meta}
 \usepackage{fontspec}
-\setmainfont{Roboto-Regular}
+\setmainfont[ItalicFont=Roboto-Italic]{Roboto-Regular}
 \setmonofont{DejaVu Sans Mono}
 
 \begin{document}
@@ -28,21 +28,39 @@
             align=center,
         }]
         %\draw (-10,-10) -- (-10,10) -- (10,10) -- (10,-10) -- cycle;
-        \node [box] (html) at (8,0) {HTML-Tools};
-        \node [box] (apy) at (1,0) {APy};
-        \node [box,double distance=1pt] (users) at (8,5) {Users};
-        \node [box] (deform) at (-4,2) {Deformatter};
-        \node [box] (pipeline) at (-4,0) {Apertium pipeline (one of many)};
-        \node [box] (reform) at (-4,-2) {Reformatter};
+        \node [box] (html) at (9,-1) {HTML-Tools};
+        \node [box,double distance=1pt] (users) at (9,7) {Users};
 
-        \draw[arrowhead,<-] (html.120) to node[nonbox,text width=30mm,right=3mm] {Tatar: \\ ``Ничә\ текст?''} (users.240);
-        \draw[arrowhead,<-] (users.300) to node[nonbox,text width=30mm,left=5mm] {Kazakh to Tatar, \\ ``Қанша\ мәтін?''} (html.60);
+        \begin{scope}[yshift=3cm]
+        \node [box] (apy) at (1,-1) {APy};
+        \begin{scope}[yshift=-1cm]
+            \node [box] (deform) at (-4,2) {Deformatter};
+            \node [box] (pipeline) at (-4,0) {Apertium pipeline (one of many)};
+            \node [box] (reform) at (-4,-2) {Reformatter};
+            \draw[dashed,thick] (-6,-3) rectangle (3,3);
+            \node at (1,-2.8) {\textit{Back end server}};
+        \end{scope}
+        \end{scope}
 
-        \draw[arrowhead,dashed] (users.187+180) to [bend right=35] (apy.70);
-        \draw[arrowhead,dashed] (apy.110) to [bend left=35] (users.173+180);
+        \draw[dashed,thick] (7,-2) rectangle (11,0);
+        \node at (9,-1.8) {\textit{Front end server}};
 
-        \draw[arrowhead] (html.185+180) to node[nonbox,text width=50mm,above=1mm] {\texttt{GET /translate? \\ langpair=kaz|tat \\ \&q=Қанша\ мәтін?}} (apy.355+180);
-        \draw[arrowhead] (apy.5+180) to node[nonbox,text width=50mm,below=2mm] {(JSON) \texttt{\{\ldots \\ "translatedText": \\ "Ничә\ текст?"\}}} (html.175+180);
+        \draw[dashed,thick] (7,1) rectangle (11,4);
+        \node at (9,1.2) {\textit{Browser}};
+        \node[draw,rectangle] at (9,3.4) {kaz \(\rightarrow\) tat};
+        \node[draw,rectangle,text width=1.4cm,minimum size=1.2cm,align=center] at (8,2.2) {Қанша\ мәтін?};
+        \node[draw,rectangle,text width=1.4cm,minimum size=1.2cm,align=center] at (10,2.2) {Ничә\ текст?};
+
+        \draw[arrowhead,<-] (9.5,4) to node[nonbox,text width=30mm,right=7mm] {Tatar: \\ ``Ничә\ текст?''} (users.-133);
+        \draw[arrowhead,<-] (users.-46) to node[nonbox,text width=30mm,left=9mm] {Kazakh to Tatar, \\ ``Қанша\ мәтін?''} (8.5,4);
+        \draw[arrowhead] (9.5,1) to (html.133);
+        \draw[arrowhead] (html.46) to (8.5,1);
+
+        \draw[arrowhead,dotted] (users.187+180) to [bend right=35] (apy.70);
+        \draw[arrowhead,dotted] (apy.110) to [bend left=35] (users.173+180);
+
+        \draw[arrowhead] (7,2.15) to node[nonbox,text width=50mm] {\texttt{GET /translate? \\ langpair=kaz|tat \\ \&q=Қанша\ мәтін?}} (apy.355+180);
+        \draw[arrowhead] (apy.5+180) to node[nonbox,text width=50mm] {(JSON) \texttt{\{\ldots \\ "translatedText": \\ "Ничә\ текст?"\}}} (7,1.9);
 
         \draw[arrowhead,rounded corners=3pt] (apy.185+180) -| ++(-1,0) -- node[nonbox,left=-6mm] {``Қанша\ мәтін?''} ([xshift=1cm]deform.0+180) -- (deform.0+180);
         \draw[arrowhead] (deform.270) -- (pipeline.90);
