@@ -4,11 +4,16 @@
 \usepackage{fontspec}
 \setmainfont[ItalicFont=Roboto-Italic,BoldFont=Roboto-Bold]{Roboto-Regular}
 \setmonofont{DejaVu Sans Mono}
+\usepackage{xcolor}
+\definecolor{mygreen}{HTML}{07ba43}
 
 \begin{document}
     \begin{tikzpicture}[
         auto,
         xscale=-1,
+        draw=white,
+        fill=white,
+        color=white,
         box/.style={
             shape=rectangle,
             rounded corners=3pt,
@@ -29,15 +34,15 @@
         }]
         %\draw (-10,-10) -- (-10,10) -- (10,10) -- (10,-10) -- cycle;
         \begin{scope}[xshift=-2cm]
-            \node [box,very thick] (html) at (1,-3) {\textbf{HTML-Tools}};
+            \node [box,draw=mygreen,color=mygreen,very thick] (html) at (1,-3) {\textbf{HTML-Tools}};
             \draw[dashed,thick] (-1,-4) rectangle (3,-2);
             \node at (1,-3.8) {\textit{Front end server}};
         \end{scope}
 
-        \node [box,double distance=1pt] (users) at (9,7) {User};
+        \node [box,double distance=2pt,double=gray] (users) at (9,7) {User};
 
         \begin{scope}[yshift=3cm]
-        \node [box,very thick] (apy) at (1,-1) {\textbf{APy}};
+        \node [box,draw=mygreen,color=mygreen,very thick] (apy) at (1,-1) {\textbf{APy}};
         \begin{scope}[yshift=-1cm]
             \node [box] (deform) at (-4,2) {Deformatter};
             \node [box] (pipeline) at (-4,0) {Apertium pipeline \\ (one of many)};
