@@ -1,0 +1,52 @@
+\RequirePackage{luatex85}
+\documentclass[tikz,convert={outfile=\jobname.svg}]{standalone}
+\usetikzlibrary{arrows.meta}
+\usepackage{fontspec}
+\setmainfont{Roboto-Regular}
+\setmonofont{DejaVu Sans Mono}
+
+\begin{document}
+    \begin{tikzpicture}[
+        auto,
+        xscale=-1,
+        box/.style={
+            shape=rectangle,
+            rounded corners=3pt,
+            draw,
+            inner sep=5pt,
+            text width=25mm,
+            align=center,
+            minimum size=30pt
+        },
+        arrowhead/.style={
+            ->,
+            >={Latex[length=6pt,width=4pt]},
+            semithick
+        },
+        nonbox/.style={
+            text width=25mm,
+            align=center,
+        }]
+        %\draw (-10,-10) -- (-10,10) -- (10,10) -- (10,-10) -- cycle;
+        \node [box] (html) at (8,0) {HTML-Tools};
+        \node [box] (apy) at (1,0) {APy};
+        \node [box,double distance=1pt] (users) at (8,5) {Users};
+        \node [box] (deform) at (-4,2) {Deformatter};
+        \node [box] (pipeline) at (-4,0) {Apertium pipeline (one of many)};
+        \node [box] (reform) at (-4,-2) {Reformatter};
+
+        \draw[arrowhead,<-] (html.120) to node[nonbox,text width=30mm,right=3mm] {Tatar: \\ ``Ничә\ текст?''} (users.240);
+        \draw[arrowhead,<-] (users.300) to node[nonbox,text width=30mm,left=5mm] {Kazakh to Tatar, \\ ``Қанша\ мәтін?''} (html.60);
+
+        \draw[arrowhead,dashed] (users.187+180) to [bend right=35] (apy.70);
+        \draw[arrowhead,dashed] (apy.110) to [bend left=35] (users.173+180);
+
+        \draw[arrowhead] (html.185+180) to node[nonbox,text width=50mm,above=1mm] {\texttt{GET /translate? \\ langpair=kaz|tat \\ \&q=Қанша\ мәтін?}} (apy.355+180);
+        \draw[arrowhead] (apy.5+180) to node[nonbox,text width=50mm,below=2mm] {(JSON) \texttt{\{\ldots \\ "translatedText": \\ "Ничә\ текст?"\}}} (html.175+180);
+
+        \draw[arrowhead,rounded corners=3pt] (apy.185+180) -| ++(-1,0) -- node[nonbox,left=-6mm] {``Қанша\ мәтін?''} ([xshift=1cm]deform.0+180) -- (deform.0+180);
+        \draw[arrowhead] (deform.270) -- (pipeline.90);
+        \draw[arrowhead] (pipeline.270) -- (reform.90);
+        \draw[arrowhead,rounded corners=3pt] (reform.0+180) -| ++(1,0) -- node[nonbox,left=-6mm] {``Ничә \\ текст?''} ([xshift=-1cm]apy.175+180) -- (apy.175+180);
+    \end{tikzpicture}
+\end{document}

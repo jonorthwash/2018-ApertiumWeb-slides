@@ -1,22 +1,39 @@
 @font-face {
     font-family: 'Roboto';
     src: url('Roboto/Roboto-Regular.ttf');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto/Roboto-Italic.ttf');
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto/Roboto-Bold.ttf');
+    font-weight: bold;
 }
 @font-face {
     font-family: 'Roboto Slab';
     src: url('Roboto_Slab/RobotoSlab-Regular.ttf');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('Roboto_Slab/RobotoSlab-Bold.ttf');
+    font-weight: bold;
 }
 body {
     font-family: 'Roboto', sans-serif;
 }
 h1 {
     font-family: 'Roboto Slab', Impact, sans-serif !important ;
-    text-shadow: none;
+    text-shadow: none !important ;
 }
 h2 {
     font-family: 'Roboto Slab', Impact, sans-serif !important ;
     font-size: 1.5em !important ;
-    text-shadow: none;
+    text-shadow: none !important ;
 }
 h3 {
     font-family: 'Roboto Slab', Impact, sans-serif !important ;
@@ -32,7 +49,7 @@ h4 {
     text-align: left;
     color: #eee8d5;
     /* size: 90%; */
-    font-size: 130% !important;
+    font-size: 130% !important ;
 }
 .sourcenotes {
     font-size: 70% !important ;
@@ -52,20 +69,20 @@ p {
 #title h1 {
     font-size: 2.2em !important ;
     text-transform: none !important ;
-    font-variant: small-caps !important;
-    text-shadow: none;
+    font-variant: small-caps !important ;
+    text-shadow: none !important ;
 }
 #title h3 {
     text-transform: none !important ;
-    text-shadow: none;
+    text-shadow: none !important ;
     font-size: 1.2em;
 }
 #title h4 {
     text-transform: none !important ;
-    text-shadow: none;
+    text-shadow: none !important ;
 }
 .ipa {
-    font-family: Arial !important;
+    font-family: Arial !important ;
 }
 .highlight-red {
     /* color: red; */
@@ -93,7 +110,7 @@ tr.greyedout td {
     text-decoration: none;
 }
 sub {
-    font-size: 80% !important;
+    font-size: 80% !important ;
 }
 table tr.Vfront th {
     color: cyan;
@@ -104,11 +121,11 @@ table tr.Vback th {
 }
 table tr td {
     color: white;
-    font-family: Arial !important;
+    font-family: Arial !important ;
 }
 table tr th {
     color: white;
-    text-align: center !important;
+    text-align: center !important ;
     vertical-align: middle !important ;
 }
 table tbody tr:last-child {
@@ -153,14 +170,14 @@ ul.bibliography li {
     list-style-type: none;
 }
 .gmk {
-    font-variant: small-caps !important;
+    font-variant: small-caps !important ;
 }
 aside ul li {
-    font-size: 60% !important;
+    font-size: 60% !important ;
 }
 
 h1 {
-    line-height: 0.95 !important;
+    line-height: 0.95 !important ;
 }
 img.noframe {
     border: 0px !important ;
@@ -199,7 +216,7 @@ gl::after {
 }
 
 tag {
-    font-size: 0.8em !important;
+    font-size: 0.8em !important ;
     pinkpink ;
 }
 tag::before {
@@ -300,17 +317,17 @@ tt {
 
 .small {
     font-size: 67% !important ;
-    line-height: 0.9 !important;
+    line-height: 0.9 !important ;
     display: inline-block !important ;
 }
 
 .codeblock {
     border: 2px solid silver !important ;
     background-color: #555 ;
-    padding: 0.5em !important;
+    padding: 0.5em !important ;
     text-align: left ;
     font-family: "DejaVu Sans Mono", "Liberation Mono", monospace !important ;
     font-size: 70% !important ;
     color: #6f6;
-    line-height: 0.975 !important;
+    line-height: 0.975 !important ;
 }
