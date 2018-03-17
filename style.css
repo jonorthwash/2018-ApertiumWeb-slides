@@ -1,9 +1,20 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
 h1 {
-    font-family: "Trebuchet MS", "Attentica 4F", "League Gothic", Impact, sans-serif !important ;
+    font-family: 'Roboto Slab', Impact, sans-serif !important ;
+    text-shadow: none;
 }
 h2 {
-    font-family: "Trebuchet MS", "Attentica 4F", "League Gothic", Impact, sans-serif !important ;
+    font-family: 'Roboto Slab', Impact, sans-serif !important ;
     font-size: 1.5em !important ;
+    text-shadow: none;
+}
+h3 {
+    font-family: 'Roboto Slab', Impact, sans-serif !important ;
+}
+h4 {
+    font-family: 'Roboto', Impact, sans-serif !important ;
 }
 .instructions {
     text-align: right;
@@ -34,13 +45,16 @@ p {
     font-size: 2.2em !important ;
     text-transform: none !important ;
     font-variant: small-caps !important;
+    text-shadow: none;
 }
 #title h3 {
     text-transform: none !important ;
+    text-shadow: none;
+    font-size: 1.2em;
 }
 #title h4 {
     text-transform: none !important ;
-    font-family: "Trebuchet MS", "Attentica 4F", "League Gothic", Impact, sans-serif !important ;
+    text-shadow: none;
 }
 .ipa {
     font-family: Arial !important;
