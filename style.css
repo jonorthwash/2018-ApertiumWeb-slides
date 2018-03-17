@@ -331,3 +331,21 @@ tt {
     color: #6f6;
     line-height: 0.975 !important ;
 }
+
+#authorsOuter {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.authorsInner {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.author {
+    margin: 20px 10px !important;
+    width: 45%;
+}
