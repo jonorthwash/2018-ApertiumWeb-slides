@@ -184,6 +184,13 @@ img.noframe {
     box-shadow: none !important ;
     background: none !important ;
 }
+img.full {
+    border: 0px !important ;
+    box-shadow: none !important ;
+    background: none !important ;
+    margin-top: 2em !important ;
+    width: 100% !important ;
+}
 .slide-number-a {
     font-size: 200% !important ;
 }
