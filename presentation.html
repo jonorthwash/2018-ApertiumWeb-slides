@@ -112,10 +112,10 @@
 					<section>
 						<h3>Full Internationalisation</h3>
 						<ul style="margin-top: 1em;">
-							<li>Language defaults to locale</li>
-							<li>Support for RTL text and layout</li>
+							<li>Default to locale</li>
+							<li>RTL text and layout</li>
 							<li>Autoglossonyms from APy: SIL, Unicode CLDR, manual curation</li>
-							<li>Localised strings in JSON, easy to contribute/extend</li>
+							<li>Easy to contribute/extend localisations</li>
 						</ul>
 					</section>
 
@@ -124,7 +124,8 @@
 						<ul>
 							<li>Instant translation</li>
 							<li>Remembers text and selections, updated in URL</li>
-							<li>...</li>
+							<li>Simple build, can be built and used offline</li>
+							<li>Matomo for analytics</li>
 						</ul>
 					</section>
 				</section>
@@ -132,6 +133,18 @@
 
 				<section>
 					<h2>APy</h2>
+					<ul>
+						<li>Modeled after ScaleMT</li>
+						<li><b>Pipelines</b> for each pair, morphological analysis/generation</li>
+						<li>Kept open and flushed between requests</li>
+						<li>Multiple pipelines on-demand, split large requests</li>
+						<li>Make a web service from any Unix pipeline: e.g. Ávvir</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h2>Advanced Features</h2>
 				</section>
 
 				<!-- section>
