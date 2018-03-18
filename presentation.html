@@ -175,6 +175,16 @@
 							<li><b class="highlight">Document translation</b>: RTF, LibreOffice/OpenOffice, MS Office 2003+</li>
 						</ul>
 					</section>
+
+					<section>
+						<h3>Modes</h3>
+						<ul>
+							<li><span class="highlight-red">FIXME: an image would be nice?</span></li>
+							<li>Currently deployed: morphological analysis and generation</li>
+							<li>Other developed modes: APy sandbox, spell-checker</li>
+							<li>Customizable and extendable</li>
+						</ul>
+					</section>
 				</section>
 
 				<section>
@@ -182,23 +192,55 @@
 
 					<section>
 						<h3>Multi-step Translation</h3>
-						<img class="noframe" style="width: 70%; margin-top: 0;" src="img/chain_graph_1.png">
+						<img class="noframe" style="width: 50%; margin-top: 0; float: left;" src="img/chain_graph_1.png">
+						<div style="float: right; width: 45%">
+							<ul>
+								<li>Translation with intermediate (pivot) languages</li>
+								<li>Defaults to shortest length—future work may incorporate pair quality</li>
+								<li>User can choose a path by selecting languages (blue nodes) and viewing valid paths (green arrows)</li>
+							</ul>
+						</div>
 					</section>
 
 					<section>
 						<h3>Dictionary lookup</h3>
-						<img class="noframe" src="img/dictionary_1.png">
+						<img class="noframe" style="width: 30%; margin-top: 0; float: left;" src="img/dictionary_1.png">
+						<div style="float: right; width: 65%">
+							<ul>
+								<li>All possible translations with part of speech</li>
+								<li>Future work:
+									<ul>
+										<li>Reverse translations for context</li>
+										<li>Gender, number, conjugation, etc.</li>
+										<li>Multi-word units</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
 					</section>
 
 					<section>
 						<h3>Spell-checking</h3>
+						<ul>
+							<li><code style="font-size: 0.9em;">libvoikko</code> or <code style="font-size: 0.9em;">hfst-ospell</code> create spellers from language modules</li>
+							<li>Separate tab in HTML-Tools</li>
+						</ul>
 					</section>
 
 					<section>
 						<h3>Suggestions</h3>
-						<img class="noframe" style="width: 30%;" src="img/suggestions_1.png">
-						<br>
-						<img class="noframe" style="width: 50%;" src="img/suggestions_2.png">
+						<div style="float: left; width: 60%">
+							<img class="noframe" style="width: 70%;" src="img/suggestions_1.png">
+							<br>
+							<img class="noframe" style="width: 100%;" src="img/suggestions_2.png">
+						</div>
+						<div style="float: right; margin-top: 3em; width: 35%">
+							<ul>
+								<li>User can suggest translations in context</li>
+								<li>Logged by APy, can seed quality improvements</li>
+								<li>Rating translations?</li>
+							</ul>
+						</div>
 					</section>
 
 				</section>
