@@ -55,5 +55,10 @@ Reveal.initialize({
     // { src: 'reveal.js/plugin/title-footer/title-footer.js', async: true, callback: function() { title_footer.initialize(); } }
 
     ]
+});
 
+
+Reveal.addEventListener('smallimg', function() {
+	document.getElementById('htmltools').classList.remove('full');
+	document.getElementById('htmltools').classList.add('sidelined');
 });

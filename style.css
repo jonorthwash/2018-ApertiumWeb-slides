@@ -363,3 +363,8 @@ tt {
     margin: 20px 10px !important;
     width: 45%;
 }
+
+img.sidelined {
+	width: 40%;
+	float: left;
+}
