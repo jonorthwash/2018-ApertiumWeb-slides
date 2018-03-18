@@ -365,6 +365,10 @@ tt {
 }
 
 img.sidelined {
-	width: 40%;
+	padding-top: 10%;
+	width: 48%;
 	float: left;
+	border: 0px !important ;
+	box-shadow: none !important ;
+	background: none !important ;
 }
