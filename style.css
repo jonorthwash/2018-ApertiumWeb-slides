@@ -26,17 +26,19 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
-h1 {
+h1, h2, h3, h4 {
     font-family: 'Roboto Slab', Impact, sans-serif !important ;
+    margin-bottom: 1em !important ;
     text-shadow: none !important ;
+}
+h1 {
+    margin-bottom: 0 !important ;
 }
 h2 {
-    font-family: 'Roboto Slab', Impact, sans-serif !important ;
     font-size: 1.5em !important ;
-    text-shadow: none !important ;
 }
 h3 {
-    font-family: 'Roboto Slab', Impact, sans-serif !important ;
+    font-size: 1.2em !important ;
 }
 h4 {
     font-family: 'Roboto', Impact, sans-serif !important ;
@@ -66,20 +68,25 @@ li.sentence {
 p {
     word-spacing: 4pt;
 }
+#title > (h1, h2, h3, h4) {
+}
 #title h1 {
     font-size: 2.2em !important ;
-    text-transform: none !important ;
     font-variant: small-caps !important ;
+    margin-bottom: 10px !important ;
     text-shadow: none !important ;
+    text-transform: none !important ;
 }
 #title h3 {
-    text-transform: none !important ;
-    text-shadow: none !important ;
     font-size: 1.2em;
+    margin-bottom: 10px !important ;
+    text-shadow: none !important ;
+    text-transform: none !important ;
 }
 #title h4 {
-    text-transform: none !important ;
+    margin-bottom: 10px !important ;
     text-shadow: none !important ;
+    text-transform: none !important ;
 }
 .ipa {
     font-family: Arial !important ;
