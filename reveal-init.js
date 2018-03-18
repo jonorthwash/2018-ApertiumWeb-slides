@@ -62,3 +62,7 @@ Reveal.addEventListener('smallimg', function() {
 	document.getElementById('htmltools').classList.remove('full');
 	document.getElementById('htmltools').classList.add('sidelined');
 });
+Reveal.addEventListener('largeimg', function() {
+	document.getElementById('htmltools').classList.remove('sidelined');
+	document.getElementById('htmltools').classList.add('full');
+});
