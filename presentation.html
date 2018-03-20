@@ -68,9 +68,9 @@
 						</div>
 					</div>
 
-					<div style="width: 98%; background: white; margin-left: auto; margin-right: auto; margin-top: 1em; margin-bottom: 1em;">
-						<img class="noframe" src="img/swarthmorelogowhite.svg" style="padding: 3px; padding-right: 6em; background: none; border: none; height: 4em;"/>
-						<img class="noframe" src="img/Apertium_logo.svg" style="padding: 3px; background: none; border: none; height: 4em;"/>
+					<div style="width: 98%; margin-left: auto; margin-right: auto; margin-top: 1em; margin-bottom: 1em;">
+						<img class="noframe" src="img/swarthmorelogotransparent.svg" style="padding: 3px; padding-right: 6em; background: none; border: none; height: 4em;"/>
+						<img class="noframe" src="img/Apertium_logo.svg" style="padding: 3px; background: none; border: none; height: 5em;"/>
 					</div>
 					</h4>
 				</section>
@@ -144,8 +144,8 @@
 					<ul>
 						<li>Modeled after ScaleMT</li>
 						<ul>
-							<li>In turn modelled after Google Translate's APy</li>
-							<li><span class="highlight-red">FIXME: Something about compatbility / drop-inability</span></li>
+							<li>In turn modelled after Google Translate's API</li>
+							<li>Drop-in replacement for major APIs</li>
 						</ul>
 						<li><b class="highlight">Pipelines</b> for each pair, morphological analysis/generation</li>
 						<ul>
@@ -179,11 +179,12 @@
 					<section>
 						<h3>Modes</h3>
 						<ul>
-							<li><span class="highlight-red">FIXME: an image would be nice?</span></li>
+							<li>Tabs in HTML-Tools interface</li>
 							<li>Currently deployed: morphological analysis and generation</li>
 							<li>Other developed modes: APy sandbox, spell-checker</li>
 							<li>Customizable and extendable</li>
 						</ul>
+						<img class="noframe" style="width: 100%; margin-top: 1em;" src="img/modes.png">
 					</section>
 				</section>
 
@@ -222,7 +223,7 @@
 					<section>
 						<h3>Spell-checking</h3>
 						<ul>
-							<li><code style="font-size: 0.9em;">libvoikko</code> or <code style="font-size: 0.9em;">hfst-ospell</code> create spellers from language modules</li>
+							<li><code>libvoikko</code> or <code>hfst-ospell</code> create spellers from language modules</li>
 							<li>Separate tab in HTML-Tools</li>
 						</ul>
 					</section>
@@ -245,12 +246,36 @@
 
 				</section>
 
-				<!-- section>
-					<h2>Selected references</h2>
-					<ul class="bibliography">
-						<li></li>
+				<section>
+					<h2>Usage</h2>
+					<ul>
+						<li>From <code>apertium.org</code> since April 2014:
+							<ul>
+								<li>2.1M visits</li>
+								<li>183 countries</li>
+								<li>19.8M translation requests</li>
+								<li>11 pairs with over 100k requests</li>
+								<li><code>nob ↔ nno</code>, <code>spa → cat</code>, <code>por → spa</code>
+							</ul>
+						</li>
+						<li>HTML-Tools and APy analytics tools
 					</ul>
-				</section -->
+				</section>
+
+				<section>
+					<h2>Relevance</h2>
+					<ul>
+						<li>Public access, low cost, low maintenance
+							<ul>
+								<li>Low disk, memory, processing requirements, and offline usage <br> ⇒ low infrastructure costs</li>
+								<li>Free and open source (GPLv3)</li>
+								<li>Focus funding and time on the specific language technology</li>
+							</ul>
+						</li>
+						<li>Customizability and sub-sites (e.g. <code>turkic.apertium.org</code>)</li>
+						<li>Multi-step translation: moderate-quality pairs with little effort, extending range as a temporary solution</li>
+						<li>Suggestions: low-resource language users can directly help in development</li>
+				</section>
 
 				<section>
 					<!-- h2 style="font-family: DejaVu Sans;">Чоң рахмат!</h2 -->
