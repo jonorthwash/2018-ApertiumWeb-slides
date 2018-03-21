@@ -377,3 +377,19 @@ img.sidelined {
 code {
     font-size: 0.9em !important ;
 }
+
+.floatinfobox {
+	border: 2px solid silver;
+	width: 40%;
+	float: right;
+	background-color: grey;
+	opacity: 0.8;
+}
+
+.floatbottom {
+	margin-top: 35% ! important ;
+}
+
+.floattop {
+	margin-bottom: 35% ! important ;
+}
