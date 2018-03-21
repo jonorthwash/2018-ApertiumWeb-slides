@@ -111,13 +111,24 @@
 					<section data-state="largeimg">
 					</section>
 
-					<section data-state="smallimg">
+					<!-- section data-state="smallimg">
 						<h3>Full Internationalisation</h3>
 						<div style="float: left; width: 49%;">
 						</div>
 						<div style="float: right; width: 50%;">
 						<ul style="margin-top: 1em;">
-							<li>Default to locale</li>
+							<li>Default to browser locale</li>
+							<li>RTL text and layout</li>
+							<li>Autoglossonyms from APy: SIL, Unicode CLDR, manual curation</li>
+							<li>Easy to contribute/extend localisations</li>
+						</ul>
+						</div>
+					</section -->
+					<section data-state="largeimg">
+						<div class="floatinfobox floatbottom">
+						<h3>Full Internationalisation</h3>
+						<ul style="margin-top: 1em;">
+							<li>Default to browser locale</li>
 							<li>RTL text and layout</li>
 							<li>Autoglossonyms from APy: SIL, Unicode CLDR, manual curation</li>
 							<li>Easy to contribute/extend localisations</li>
@@ -125,7 +136,8 @@
 						</div>
 					</section>
 
-					<section data-state="smallimg">
+
+					<!-- section data-state="smallimg">
 						<h3>Other Features</h3>
 						<div style="float: left; width: 49%;">
 						</div>
@@ -137,7 +149,7 @@
 							<li>Matomo for analytics</li>
 						</ul>
 						</div>
-					</section>
+					</section -->
 					<section data-state="largeimg">
 						<div class="floatinfobox floattop">
 						<h3>Other Features</h3>
@@ -155,16 +167,22 @@
 				<section>
 					<h2>APy</h2>
 					<ul>
-						<li>Modeled after ScaleMT</li>
+						<li>Example of use</li>
+						<ul>
+							<li>query (URL): <code>/translate?langpair=kaz|tat&q=Қанша мәтін?</code></li>
+							<li>response (JSON): <code>{… "translatedText": "Ничә текст?"}</code></li>
+						</ul>
+						<li>Endpoints modelled after ScaleMT</li>
 						<ul>
 							<li>In turn modelled after Google Translate's API</li>
 							<li>Drop-in replacement for major APIs</li>
 						</ul>
-						<li><b class="highlight">Pipelines</b> for each pair, morphological analysis/generation</li>
+						<li><b class="highlight">Pipelines</b> for each pair and morphological analysis/generation</li>
 						<ul>
-							<li>Kept open and flushed between requests</li>
+							<li>Leverages existing Apertium mode files</li>
+							<li>Pipeline kept open and flushed between requests</li>
 							<li>Multiple pipelines on-demand, split large requests</li>
-							<li>Make a web service from any Unix pipeline: e.g. Ávvir</li>
+							<li>APy can make a web service from any Unix pipeline: e.g. Ávvir</li>
 						</ul>
 					</ul>
 				</section>
@@ -226,7 +244,7 @@
 								<li>Future work:
 									<ul>
 										<li>Reverse translations for context</li>
-										<li>Gender, number, conjugation, etc.</li>
+										<li>Morphological subcategory information (Gender, number, conjugation, etc.)</li>
 										<li>Multi-word units</li>
 									</ul>
 								</li>

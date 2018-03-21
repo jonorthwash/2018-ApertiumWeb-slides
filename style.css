@@ -375,15 +375,18 @@ img.sidelined {
 }
 
 code {
-    font-size: 0.9em !important ;
+	font-size: 0.9em !important ;
+	border: 0.5px solid #ddd !important ;
+	padding: 1px !important ;
+	background-color: #3a3a3a ;
 }
 
 .floatinfobox {
 	border: 2px solid silver;
 	width: 40%;
 	float: right;
-	background-color: grey;
-	opacity: 0.8;
+	background-color: rgba(128,128,128,0.8);
+	font-size: 80% !important ;
 }
 
 .floatbottom {
