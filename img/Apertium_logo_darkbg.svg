@@ -12,7 +12,7 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="65.915283mm"
    height="64.498062mm"
-   viewBox="0 0 65.915283 64.498062"
+   viewBox="-5 0 70.915283 70.498062"
    version="1.1"
    id="svg5004"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
@@ -458,9 +458,9 @@
        x="-63.055386"
        style="font-style:normal;font-weight:normal;font-size:3.20042801px;line-height:0%;font-family:'DejaVu Sans';fill:#828282;fill-opacity:1;stroke:none;stroke-width:0.26670232"
        xml:space="preserve"><tspan
-         style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.62734318px;line-height:125%;font-family:'DejaVu Sans';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#828282;fill-opacity:1;stroke-width:0.26670232"
-         y="177.28781"
-         x="-63.055386"
+         style="font-style:oblique;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:8.62734318px;line-height:100%;font-family:'DejaVu Sans';text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#828282;fill-opacity:1;stroke-width:0.26670232"
+         y="180.28781"
+         x="-75.055386"
          id="tspan2293"
          sodipodi:role="line">Apertium</tspan></text>
     <path
