@@ -152,6 +152,7 @@
 					</div>
 				</section -->
 				<section>
+                    <div>
 					<h2>HTML-Tools</h2>
 						<img class="full" style="transition: all 0.5s ease-in-out;" src="img/sardu-turkic.png" id="htmltools">
 					<div class="floatinfobox floattop" style="position: absolute; bottom: -40%; right: 0;">
@@ -163,7 +164,7 @@
 						<li>Matomo for analytics</li>
 					</ul>
 					</div>
-				</section>
+                    </div>
 				</section>
 
 
@@ -192,52 +193,63 @@
 				</section>
 
 
-				<section>
-					<h2 style="margin-top: -35%">Advanced Features</h2>
-                    <div class="fragment current-visible" style="position: fixed">
-                    <h3>Language Variants</h3>
-					<img class="noframe" style="width: 80%;" src="img/variants.png">
+                <section>
+                    <div style="height: 25em;">
+                        <h2>Advanced Features</h2>
+                        <h3>Language Variants</h3>
+				    	<img class="noframe" style="width: 80%;" src="img/variants.png">
                     </div>
+                </section>
 
-                    <div class="fragment current-visible" style="position: fixed; margin-top: 10%">
-                    <h3>Webpage and Document Translation</h3>
-                    <ul>
-						<li><b class="highlight">Webpage translation</b>: output displayed in iframe</li>
-						<ul>
-							<li>Links within webpages trigger translation too</li>
-						</ul>
-						<li><b class="highlight">Document translation</b>: RTF, LibreOffice/OpenOffice, MS Office 2003+</li>
-					</ul>
+                <section>
+                    <div style="height: 25em;">
+                        <h2>Advanced Features</h2>
+                        <h3 style="margin-top: 5.5em;">Webpage and Document Translation</h3>
+                        <ul>
+				    		<li><b class="highlight">Webpage translation</b>: output displayed in iframe</li>
+				    		<ul>
+				    			<li>Links within webpages trigger translation too</li>
+				    		</ul>
+				    		<li><b class="highlight">Document translation</b>: RTF, LibreOffice/OpenOffice, MS Office 2003+</li>
+				    	</ul>
                     </div>
-					
-                    <div class="fragment current-visible" style="position: fixed; margin-top: 10%">
-                    <h3>Modes</h3>
-					<ul>
-						<li>Tabs in HTML-Tools interface</li>
-						<li>Currently deployed: morphological analysis and generation</li>
-						<li>Other developed modes: APy sandbox, spell-checker</li>
-						<li>Customizable and extendable</li>
-					</ul>
-					<img class="noframe" style="width: 100%; margin-top: 1em;" src="img/modes.png">
+                </section>
+
+                <section>
+                    <div style="height: 25em;">
+                        <h2>Advanced Features</h2>
+                        <h3 style="margin-top: 172px;">Modes</h3>
+				    	<ul>
+				    		<li>Tabs in HTML-Tools interface</li>
+				    		<li>Currently deployed: morphological analysis and generation</li>
+				    		<li>Other developed modes: APy sandbox, spell-checker</li>
+				    		<li>Customizable and extendable</li>
+				    	</ul>
+				    	<img class="noframe" style="width: 100%; margin-top: 1em;" src="img/modes.png">
                     </div>
-				</section>
+                </section>
 
 				<section>
-					<h2 style="margin-top: -35%">Ongoing Work</h2>
-                    <div class="fragment current-visible" style="position: fixed">
-					<h3>Multi-step Translation</h3>
-					<img class="noframe" style="width: 50%; margin-top: 0; float: left;" src="img/chain_graph_1.png">
-					<div style="float: right; width: 45%">
-						<ul>
-							<li>Translation through <span class="highlight">intermediate (pivot) languages</span></li>
-							<li>Defaults to <span class="highlight">shortest path</span>—future work may incorporate pair quality</li>
-							<li>User can <span class="highlight">choose a path</span> by <span class="highlight-cyan">selecting languages</span> and <span class="highlight-green">viewing valid paths</span></li>
-							<!-- li>User can <span class="highlight">choose a path</span> by selecting languages (blue nodes) and viewing valid paths (green arrows)</li -->
-						</ul>
-					</div>
+                    <div style="height: 25em;">
+					    <h2>Ongoing Work</h2>
+				    	<h3 style="margin-top: 121px">Multi-step Translation</h3>
+				    	<img class="noframe" style="width: 50%; margin-top: 0; float: left;" src="img/chain_graph_1.png">
+				    	<div style="float: right; width: 45%">
+				    		<ul>
+				    			<li>Translation through <span class="highlight">intermediate (pivot) languages</span></li>
+				    			<li>Defaults to <span class="highlight">shortest path</span>—future work may incorporate pair quality</li>
+				    			<li>User can <span class="highlight">choose a path</span> by <span class="highlight-cyan">selecting languages</span> and <span class="highlight-green">viewing valid paths</span></li>
+				    			<!-- li>User can <span class="highlight">choose a path</span> by selecting languages (blue nodes) and viewing valid paths (green arrows)</li -->
+				    		</ul>
+				    	</div>
                     </div>
-                    <div class="fragment current-visible" style="position: fixed; margin-top: 6%">
-					<h3>Dictionary lookup</h3>
+                </section>
+
+
+				<section>
+                    <div style="height: 25em;">
+					    <h2>Ongoing Work</h2>
+					<h3 style="margin-top: 187px">Dictionary lookup</h3>
 					<img class="noframe" style="width: 30%; margin-top: 0; float: left;" src="img/dictionary_1.png">
 					<div style="float: right; width: 65%">
 						<ul>
@@ -252,14 +264,20 @@
 						</ul>
 					</div>
                     </div>
-                    <div class="fragment current-visible" style="position: fixed; margin-top: 10%">
-					<h3>Spell-checking</h3>
+                </section>
+				<section>
+                    <div style="height: 25em;">
+					    <h2>Ongoing Work</h2>
+					<h3 style="margin-top: 284px">Spell-checking</h3>
 					<ul>
 						<li><code>libvoikko</code> or <code>hfst-ospell</code> create spellers from language modules</li>
 						<li>Separate tab in HTML-Tools</li>
 					</ul>
-					</div>
-                    <div class="fragment current-visible" style="position: fixed; margin-top: -2%">
+                    </div>
+                </section>
+				<section>
+                    <div style="height: 25em;">
+					    <h2>Ongoing Work</h2>
 					<h3>Suggestions</h3>
 					<div style="float: left; width: 60%">
 						<img class="noframe" style="width: 70%;" src="img/suggestions_1.png">
